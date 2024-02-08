@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_16">
+
+        <TextView
+            android:id="@+id/nameLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/name_label"
+            android:layout_margin="@dimen/margin_4"
+            app:layout_constraintEnd_toStartOf="@+id/companyLabel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBaseline_toBaselineOf="@+id/companyLabel"
+            android:tooltipText="nameLabel"/>
+        <TextView
+            android:id="@+id/companyLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/company_label"
+            android:layout_margin="@dimen/margin_4"
+            app:layout_constraintStart_toEndOf="@+id/nameLabel"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/sizeLabel"
+            app:layout_constraintBaseline_toBaselineOf="@+id/nameLabel"
+            android:tooltipText="companyLabel"/>
+        <TextView
+            android:id="@+id/sizeLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/size_label"
+            android:layout_margin="@dimen/margin_4"
+            app:layout_constraintStart_toEndOf="@+id/companyLabel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBaseline_toBaselineOf="@+id/companyLabel"
+            android:tooltipText="sizeLabel"/>
+
+
+        <TextView
+            android:id="@+id/nameListItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_4"
+            app:layout_constraintEnd_toStartOf="@+id/companyListItem"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nameLabel"
+            app:layout_constraintBottom_toTopOf="@+id/descriptionListItem"
+            android:tooltipText="name"/>
+        <TextView
+            android:id="@+id/companyListItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_4"
+            app:layout_constraintStart_toEndOf="@+id/nameListItem"
+            app:layout_constraintEnd_toStartOf="@+id/sizeListItem"
+            app:layout_constraintTop_toBottomOf="@+id/companyLabel"
+            android:tooltipText="company" />
+        <TextView
+            android:id="@+id/sizeListItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/companyListItem"
+            app:layout_constraintTop_toBottomOf="@+id/sizeLabel"
+            android:tooltipText="size"/>
+
+        <TextView
+            android:id="@+id/descriptionListItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_8"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nameListItem"
+            android:tooltipText="description" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <data>
+
+        <variable
+            name="shoesViewModel"
+            type="com.udacity.shoestore.ShoesViewModel" />
+    </data>
+</layout>

@@ -3,10 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!-- Constraint layout because I need a relative positioning among elements -->
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/margin_16">
+        android:layout_margin="@dimen/margin_32">
 
         <TextView
             android:id="@+id/nameLabel"
@@ -17,8 +19,7 @@
             app:layout_constraintEnd_toStartOf="@+id/companyLabel"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBaseline_toBaselineOf="@+id/companyLabel"
-            android:tooltipText="nameLabel"/>
+            app:layout_constraintBaseline_toBaselineOf="@+id/companyLabel"/>
         <TextView
             android:id="@+id/companyLabel"
             android:layout_width="wrap_content"
@@ -28,8 +29,7 @@
             app:layout_constraintStart_toEndOf="@+id/nameLabel"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/sizeLabel"
-            app:layout_constraintBaseline_toBaselineOf="@+id/nameLabel"
-            android:tooltipText="companyLabel"/>
+            app:layout_constraintBaseline_toBaselineOf="@+id/nameLabel"/>
         <TextView
             android:id="@+id/sizeLabel"
             android:layout_width="wrap_content"
@@ -39,8 +39,7 @@
             app:layout_constraintStart_toEndOf="@+id/companyLabel"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBaseline_toBaselineOf="@+id/companyLabel"
-            android:tooltipText="sizeLabel"/>
+            app:layout_constraintBaseline_toBaselineOf="@+id/companyLabel"/>
 
 
         <TextView
@@ -51,8 +50,7 @@
             app:layout_constraintEnd_toStartOf="@+id/companyListItem"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/nameLabel"
-            app:layout_constraintBottom_toTopOf="@+id/descriptionListItem"
-            android:tooltipText="name"/>
+            app:layout_constraintBottom_toTopOf="@+id/descriptionListItem"/>
         <TextView
             android:id="@+id/companyListItem"
             android:layout_width="wrap_content"
@@ -60,8 +58,7 @@
             android:layout_margin="@dimen/margin_4"
             app:layout_constraintStart_toEndOf="@+id/nameListItem"
             app:layout_constraintEnd_toStartOf="@+id/sizeListItem"
-            app:layout_constraintTop_toBottomOf="@+id/companyLabel"
-            android:tooltipText="company" />
+            app:layout_constraintTop_toBottomOf="@+id/companyLabel" />
         <TextView
             android:id="@+id/sizeListItem"
             android:layout_width="wrap_content"
@@ -69,8 +66,7 @@
             android:layout_margin="@dimen/margin_8"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/companyListItem"
-            app:layout_constraintTop_toBottomOf="@+id/sizeLabel"
-            android:tooltipText="size"/>
+            app:layout_constraintTop_toBottomOf="@+id/sizeLabel"/>
 
         <TextView
             android:id="@+id/descriptionListItem"
@@ -79,8 +75,7 @@
             android:layout_margin="@dimen/margin_8"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/nameListItem"
-            android:tooltipText="description" />
+            app:layout_constraintTop_toBottomOf="@+id/nameListItem" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

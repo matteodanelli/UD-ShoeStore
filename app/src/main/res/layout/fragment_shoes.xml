@@ -17,7 +17,8 @@
             android:focusable="true"
             android:src="@drawable/ic_add"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent"
+            android:contentDescription="@string/fab" />
 
         <androidx.core.widget.NestedScrollView
             android:id="@+id/textWelcomeScrollView"
@@ -33,7 +34,6 @@
                 android:id="@+id/shoeElementList"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/customborder"
                 android:layout_marginBottom="64dp"
                 android:orientation="vertical" />
 

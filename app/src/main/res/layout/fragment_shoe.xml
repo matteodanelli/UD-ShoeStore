@@ -16,14 +16,14 @@
             android:layout_marginTop="32dp"
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="16dp"
-            android:text="Name"
-            app:layout_constraintBottom_toTopOf="@+id/editTextText2"
+            android:text="@string/name"
+            app:layout_constraintBottom_toTopOf="@+id/editName"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/editTextText2"
+            android:id="@+id/editName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -34,7 +34,9 @@
             android:inputType="text"
             app:layout_constraintBottom_toTopOf="@+id/textView3"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            android:autofillHints="name"
+            tools:ignore="LabelFor" />
 
         <TextView
             android:id="@+id/textView3"
@@ -43,13 +45,13 @@
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="16dp"
-            android:text="Company"
-            app:layout_constraintBottom_toTopOf="@+id/editTextText3"
+            android:text="@string/company"
+            app:layout_constraintBottom_toTopOf="@+id/editCompany"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
         <EditText
-            android:id="@+id/editTextText3"
+            android:id="@+id/editCompany"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -61,7 +63,8 @@
             app:layout_constraintBottom_toTopOf="@+id/textView4"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            android:importantForAutofill="no" />
+            android:importantForAutofill="no"
+            tools:ignore="LabelFor" />
 
         <TextView
             android:id="@+id/textView4"
@@ -70,13 +73,13 @@
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="16dp"
-            android:text="Size"
-            app:layout_constraintBottom_toTopOf="@+id/editTextText4"
+            android:text="@string/size"
+            app:layout_constraintBottom_toTopOf="@+id/editSize"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
         <EditText
-            android:id="@+id/editTextText4"
+            android:id="@+id/editSize"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -87,7 +90,9 @@
             android:text="@={shoe.size}"
             app:layout_constraintBottom_toTopOf="@+id/textView5"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            android:autofillHints="size"
+            tools:ignore="LabelFor" />
 
         <TextView
             android:id="@+id/textView5"
@@ -96,13 +101,13 @@
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="16dp"
-            android:text="Description"
-            app:layout_constraintBottom_toTopOf="@+id/editTextText5"
+            android:text="@string/description"
+            app:layout_constraintBottom_toTopOf="@+id/editDescription"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
         <EditText
-            android:id="@+id/editTextText5"
+            android:id="@+id/editDescription"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -113,7 +118,9 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             tools:layout_editor_absoluteY="396dp"
-            app:layout_constraintBottom_toTopOf="@+id/linearLayout"/>
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+            android:autofillHints="description"
+            tools:ignore="LabelFor" />
 
         <LinearLayout
             android:id="@+id/linearLayout"
@@ -124,7 +131,7 @@
             android:layout_marginStart="32dp"
             tools:layout_editor_absoluteX="1dp"
             tools:layout_editor_absoluteY="442dp"
-            app:layout_constraintBottom_toTopOf="@+id/editTextText5">
+            app:layout_constraintBottom_toTopOf="@+id/editDescription">
 
             <Button
                 android:id="@+id/cancel_button"
@@ -132,7 +139,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:enabled="true"
-                android:text="CANCEL" />
+                android:text="@string/cancel"
+                style="?android:attr/buttonBarButtonStyle" />
 
             <Button
                 android:id="@+id/save_button"
@@ -140,7 +148,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:enabled="true"
-                android:text="SAVE" />
+                android:text="@string/save"
+                style="?android:attr/buttonBarButtonStyle" />
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 

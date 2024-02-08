@@ -8,12 +8,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.get
 import androidx.navigation.Navigation
 import androidx.navigation.Navigation.findNavController
 import com.udacity.shoestore.databinding.FragmentShoeBinding
 import com.udacity.shoestore.models.Shoe
-import timber.log.Timber
 
 class ShoeFragment : Fragment() {
 
@@ -34,10 +32,11 @@ class ShoeFragment : Fragment() {
 
         binding.cancelButton.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_shoeFragment_to_shoesFragment))
         binding.saveButton.setOnClickListener {
-            findNavController(it).navigate(R.id.action_shoeFragment_to_shoesFragment)
             Log.d("ShoeFragment", "Button clicked, ${binding.shoe}")
-            val newShoe = Shoe( "Speed X", "42", "Arimas", "This is the fastest shoe in the universe!")
+            val newShoe = Shoe( binding.editName.text.toString(), binding.editSize.text.toString(), binding.editCompany.text.toString(), binding.editDescription.text.toString())
             currentViewModel.addShoe(newShoe)
+            findNavController(it).navigate(R.id.action_shoeFragment_to_shoesFragment)
+
         }
         return binding.root
     }

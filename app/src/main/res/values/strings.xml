@@ -10,8 +10,8 @@
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="instructions_1">You are opening the list of all shoes available.</string>
-    <string name="instructions_2">Select the color and the style you prefer and don\'t forget to add to the basket!\nOnce done that, feel free to pay with one of the available card or just using your shoeCoins.\nENJOY! </string>
+    <string name="instructions_1">Follow me in the process..</string>
+    <string name="instructions_2">Write the feature you prefer and don\'t forget to add to the basket!\nOnce done that, feel free to pay with one of the available card or just using your shoeCoins.\nENJOY! </string>
     <string name="see_shoes">Shoes now!</string>
     <string name="logout">Logout</string>
     <!-- TODO: Remove or change this placeholder text -->
@@ -19,5 +19,15 @@
     <string name="company_label"><u>Company</u></string>
     <string name="size_label"><u>Size</u></string>
     <string name="description_label"><u>Description</u></string>
-
+    <string name="welcome_user"><b>Welcome user!</b></string>
+    <string name="welcome_description">Thanks for the fish. You\'re at the gate of something new, special. New opportunities ahead after the button!</string>
+    <string name="go">Let\'s go!</string>
+    <string name="shoes">shoes</string>
+    <string name="name">Name</string>
+    <string name="company">Company</string>
+    <string name="size">Size</string>
+    <string name="description">Description</string>
+    <string name="cancel">CANCEL</string>
+    <string name="save">SAVE</string>
+    <string name="fab">fab</string>
 </resources>

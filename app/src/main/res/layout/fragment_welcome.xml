@@ -1,47 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".WelcomeFragment">
 
-            <LinearLayout
+    <!-- LinearLayout because there is no need of complex positioning. Everything is one above the other -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_margin="@dimen/margin_32"
+        android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="400dp"
+                android:layout_height="300dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/shoes"
+                android:layout_margin="@dimen/margin_16"
+                android:contentDescription="@string/shoes" />
+
+            <TextView
+                android:id="@+id/welcome_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/welcome_user"
+                tools:text="welcome_title"
+                android:layout_margin="@dimen/margin_16"/>
+
+            <TextView
+                android:id="@+id/welcome_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/welcome_description"
+                tools:text="welcome_description"
+                android:layout_margin="@dimen/margin_16"/>
+
+            <Button
+                android:id="@+id/welcome_button"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:id="@+id/imageView"
-                    android:layout_width="400dp"
-                    android:layout_height="300dp"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/shoes"
-                    android:layout_margin="@dimen/margin_16"/>
-
-                <TextView
-                    android:id="@+id/welcome_title"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Welcome user!"
-                    tools:text="welcome_title"
-                    android:layout_margin="@dimen/margin_16"/>
-
-                <TextView
-                    android:id="@+id/welcome_description"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Thanks for the fish. You're at the gate of something new, special. New opportunities ahead after the button!"
-                    tools:text="welcome_description"
-                    android:layout_margin="@dimen/margin_16"/>
-
-                <Button
-                    android:id="@+id/welcome_button"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Let's go!"
-                    tools:text="welcome_button"
-                    android:layout_margin="@dimen/margin_16"/>
+                android:layout_height="wrap_content"
+                android:text="@string/go"
+                tools:text="welcome_button"/>
 
             </LinearLayout>
 </layout>

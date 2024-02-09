@@ -29,11 +29,10 @@ class ShoeFragment : Fragment() {
         currentViewModel = ViewModelProvider(requireActivity())[ShoesViewModel::class.java]
 
         binding.viewmodel = currentViewModel
-
+        binding.shoe = Shoe("","","","")
         binding.cancelButton.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_shoeFragment_to_shoesFragment))
         binding.saveButton.setOnClickListener {
-            Log.d("ShoeFragment", "Button clicked, ${binding.shoe}")
-            val newShoe = Shoe( binding.editName.text.toString(), binding.editSize.text.toString(), binding.editCompany.text.toString(), binding.editDescription.text.toString())
+            val newShoe = binding.shoe
             currentViewModel.addShoe(newShoe)
             findNavController(it).navigate(R.id.action_shoeFragment_to_shoesFragment)
 
